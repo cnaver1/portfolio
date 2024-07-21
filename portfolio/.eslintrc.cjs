@@ -19,7 +19,7 @@ module.exports = {
   },
   settings: {
     react: {
-      version: '18.2',
+      version: 'detect',
     },
   },
   plugins: [
@@ -50,4 +50,4 @@ module.exports = {
     'react/jsx-no-duplicate-props': 'error', // Errors on duplicate props
     'react/jsx-no-undef': 'error', // Errors on undefined components
   },
-}
+};
