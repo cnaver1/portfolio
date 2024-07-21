@@ -8,6 +8,9 @@ const viteConfig =  defineConfig({
     host: true, // Allow access from outside the container
     strictPort:true,
     port: 8080, // Specify the port
+    watch: {
+      usePolling: true,
+    },
   },
 })
 
