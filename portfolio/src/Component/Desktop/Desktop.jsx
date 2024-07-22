@@ -1,17 +1,18 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import * as d3 from "d3";
+import { Viewer } from "../../Classes/Viewer";
+import { data } from "../../Data/data";
 
 export const Desktop = () => {
+	let viewer;
+
 	useEffect(() => {
-		const svg = d3
-			.select("#svg")
-			.append("svg")
-			.attr("width", "100vw")
-			.attr("height", "100vh");
+		viewer = new Viewer("svg"); //initialize the viewer class
+		viewer.render(data);
 	}, []);
 
 	return (
-		<div
+		<svg
 			id="svg"
 			width={"100vw"}
 			height={"100vh"}
@@ -21,6 +22,6 @@ export const Desktop = () => {
 				left: 0,
 				backgroundColor: "transparent",
 			}}
-		></div>
+		></svg>
 	);
 };
